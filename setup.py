@@ -11,5 +11,5 @@ setup(
     author_email='greg@rocketrip.com',
     license='MIT',
     url='https://github.com/greg-rocketrip/word_to_number',
-    packages=['word_to_number']
+    packages=['words_to_number']
 )
