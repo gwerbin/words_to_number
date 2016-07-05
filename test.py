@@ -29,6 +29,11 @@ class TestFindNumbers(unittest.TestCase):
         expected = {1969: (6, 5)}
         self.assertEqual(find_numbers(s), expected)
 
+    # def test_moon(self):
+    #     s = "In nineteen sixty-nine we landed on the moon"
+    #     expected = {1969: (6, 5)}
+    #     self.assertEqual(find_numbers(s), expected)
+
 
 class TestReplaceNumbers(unittest.TestCase):
     def test_gettysburg(self):
@@ -49,4 +54,14 @@ class TestReplaceNumbers(unittest.TestCase):
     def test_dr_evil(self):
         s = "One hundred billion dollars"
         expected = "100000000000 dollars"
+        self.assertEqual(replace_numbers(s), expected)
+
+    def test_unit_ten(self):
+        s = "Seven twenty corkscrew"
+        expected = "720 corkscrew"
+        self.assertEqual(replace_numbers(s), expected)
+
+    def test_ten_ten(self):
+        s = "Ten eighty kickflip"
+        expected = "1080 kickflip"
         self.assertEqual(replace_numbers(s), expected)
