@@ -4,7 +4,8 @@ import sys
 from operator import mul
 
 logger = logging.getLogger('words_to_number.words_to_number')
-logger.addHandler(logging.StreamHandler())
+# logger.addHandler(logging.StreamHandler())
+logger.addHandler(logging.NullHandler())
 def log_exception(exc_type, exc_value, exc_traceback):
     # http://stackoverflow.com/a/16993115/2954547
     if issubclass(exc_type, KeyboardInterrupt):
@@ -13,8 +14,8 @@ def log_exception(exc_type, exc_value, exc_traceback):
     logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
     raise exc_type(exc_value).with_traceback(exc_traceback)
 sys.excepthook = log_exception
-logger.setLevel(logging.DEBUG)
-# logger.setLevel(logging.CRITICAL)
+# logger.setLevel(logging.DEBUG)
+# logger.setLevel(logging.ERROR)
 
 # import inflect
 # UNITS = tuple(inflect.unit + inflect.teen)
