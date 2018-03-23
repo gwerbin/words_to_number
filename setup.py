@@ -4,7 +4,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name='word-to-number',
+    name='words_to_number',
     version='1.0',
     description='Convert English text representation of numbers to numerical representation',
     author='Greg Werbin and Rocketrip',
