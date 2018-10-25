@@ -8,5 +8,7 @@ setup(
     author_email='outthere@me.gregwerbin.com',
     license='MIT',
     url='https://github.com/gwerbin/word_to_number',
-    packages=find_packages(exclude=['test'])
+    version='0.1',
+    packages=find_packages(exclude=['test']),
+    python_requires='3.6'
 )
